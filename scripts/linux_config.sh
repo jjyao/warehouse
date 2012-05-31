@@ -12,7 +12,8 @@ then
 	sudo apt-get install git-core  git-doc
 fi
 ssh-keygen -t rsa -c "jeromeyjj@gmail.com"
-# Add SSH key to GitHub
+echo "Add SSH key to GitHub and complete the installation of Git"
+read ok
 
 # nautilus-open-terminal
 if (check_distribution Fedora)
@@ -38,11 +39,26 @@ then
 	sudo apt-get install google-chrome-stable
 fi
 
+# ctags
+if (check_distribution Fedora)
+then
+	yum install exuberant-ctags
+elif (check_distribution Ubuntu)
+then
+	sudo apt-get install exuberant-ctags
+fi
+
 # Soft Links
 if (check_distribution Fedora)
 then
 	ln -s gnome-terminal cmd
 fi
+
+# Vim Plugins From vim-scripts on GitHub
+# neocomplcache
+git clone https://github.com/vim-scripts/neocomplcache.git /usr/share/vim/plugins/neocomplcache
+# cd /usr/share/vim/plugins/neocomplcache; git pull
+
 
 function check_distribution
 {
