@@ -24,6 +24,15 @@ then
 	sudo apt-get install nautilus-open-terminal
 fi
 
+# shutter(screen capture)
+if (check_distribution Fedora)
+then
+    yum install shutter
+elif (check_distribution Ubuntu)
+then
+    sudo apt-get install shutter
+fi
+
 # chrome
 if (check_distribution Fedora)
 then
