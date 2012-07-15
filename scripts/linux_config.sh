@@ -4,10 +4,10 @@
 
 # Softwares
 # git
-if (check_distribution Fedora)
+if (distribution_is Fedora)
 then
 	yum install git-core
-elif (check_distribution Ubuntu)
+elif (distribution_is Ubuntu)
 then
 	sudo apt-get install git-core  git-doc
 fi
@@ -15,31 +15,34 @@ ssh-keygen -t rsa -c "jeromeyjj@gmail.com"
 echo "Add SSH key to GitHub and complete the installation of Git"
 read ok
 
+# git config
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+
 # nautilus-open-terminal
-if (check_distribution Fedora)
+if (distribution_is Fedora)
 then
 	yum install nautilus-open-terminal
-elif (check_distribution Ubuntu)
+elif (distribution_is Ubuntu)
 then
 	sudo apt-get install nautilus-open-terminal
 fi
 
 # shutter(screen capture)
-if (check_distribution Fedora)
+if (distribution_is Fedora)
 then
     yum install shutter
-elif (check_distribution Ubuntu)
+elif (distribution_is Ubuntu)
 then
     sudo apt-get install shutter
 fi
 
 # chrome
-if (check_distribution Fedora)
+if (distribution_is Fedora)
 then
 	wget https://dl-ssl.google.com/linux/google-repo-setup.sh -P /tmp
 	sudo sh /tmp/google-repo-setup.sh
 	yum install google-chrome-stable
-elif (check_distribution Ubuntn)
+elif (distribution_is Ubuntn)
 then
 	wget https://dl-ssl.google.com/linux/linux_signing_key.pub -P /tmp
 	sudo apt-key add /tmp/linux_signing_key.pub
@@ -49,16 +52,16 @@ then
 fi
 
 # ctags
-if (check_distribution Fedora)
+if (distribution_is Fedora)
 then
 	yum install exuberant-ctags
-elif (check_distribution Ubuntu)
+elif (distribution_is Ubuntu)
 then
 	sudo apt-get install exuberant-ctags
 fi
 
 # Soft Links
-if (check_distribution Fedora)
+if (distribution_is Fedora)
 then
 	ln -s gnome-terminal cmd
 fi
@@ -69,7 +72,7 @@ git clone https://github.com/vim-scripts/neocomplcache.git /usr/share/vim/plugin
 # cd /usr/share/vim/plugins/neocomplcache; git pull
 
 
-function check_distribution
+function distribution_is
 {
 	return `cat /etc/issue | grep "$1" > /dev/null 2>&1`
 }

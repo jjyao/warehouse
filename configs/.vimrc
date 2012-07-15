@@ -1,10 +1,23 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" basic
 set autoindent
 set cindent
 set number
-
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
+set expandtab
+set listchars=tab:>-,trail:-
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" plugins:
+"   taglist
+"   ctags
+"   neocomplcache
+"   BlockComment
+"   AlignPlugin
+"
+"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " taglist
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
