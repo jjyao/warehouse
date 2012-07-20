@@ -1,5 +1,10 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " basic
+syntax on
+set background=light
+colorscheme bandit
+set lbr
+set hlsearch
 set autoindent
 set cindent
 set number
@@ -9,6 +14,15 @@ set shiftwidth=4
 set expandtab
 set listchars=tab:>-,trail:-
 
+" status bar
+set laststatus=2
+set statusline=
+set statusline+=[%F]
+set statusline+=\ [%{''.(&fenc!=''?&fenc:&enc).''}]
+set statusline+=%=
+set statusline+=[%l/%L]
+set statusline+=\ [%P]
+hi statusline ctermfg=white ctermbg=black
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " plugins:
 "   taglist
@@ -20,14 +34,14 @@ set listchars=tab:>-,trail:-
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " taglist
-let Tlist_Ctags_Cmd = "/usr/bin/ctags"
+let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
 let Tlist_WinWidth = 40
 map <F4> : TlistToggle<cr>
-map <F8> : !/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-
+map <F8> : !/usr/local/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+j
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " neocomplcache
-set runtimepath+=/usr/share/vim/plugins/neocomplcache
+set runtimepath+=/Users/jjyao/.vim/neocomplcache
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
 " Use neocomplcache.
