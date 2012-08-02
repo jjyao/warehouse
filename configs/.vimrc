@@ -1,18 +1,30 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " basic
-syntax on
-set background=light
-colorscheme bandit
 set lbr
+set nocompatible
+set ignorecase
+set smartcase
 set hlsearch
 set autoindent
 set cindent
-set number
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+set showcmd
+
+" visual
+syntax on
+set background=light
+colorscheme bandit
+set number
 set listchars=tab:>-,trail:-
+" set showmatch
+
+" php
+let php_sql_query=1
 
 " status bar
 set laststatus=2
@@ -23,23 +35,26 @@ set statusline+=%=
 set statusline+=[%l/%L]
 set statusline+=\ [%P]
 hi statusline ctermfg=white ctermbg=black
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" plugins:
-"   taglist
-"   ctags
-"   neocomplcache
-"   BlockComment
-"   AlignPlugin
-"
-"
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" plugins
+call vundle#rc()
+
+" Bundle list
+Bundle 'gmarik/vundle'
+Bundle 'BlockComment.vim'
+Bundle 'taglist.vim'
+Bundle 'Shougo/neocomplcache'
+Bundle 'Align'
+Bundle 'sudo.vim'
+Bundle 'mru.vim'
+
 " taglist
 let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
 let Tlist_WinWidth = 40
 map <F4> : TlistToggle<cr>
 map <F8> : !/usr/local/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-j
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " neocomplcache
 set runtimepath+=/Users/jjyao/.vim/neocomplcache
 " Disable AutoComplPop.
@@ -119,3 +134,5 @@ let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+filetype plugin on

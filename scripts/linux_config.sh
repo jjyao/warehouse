@@ -16,7 +16,14 @@ echo "Add SSH key to GitHub and complete the installation of Git"
 read ok
 
 # git config
+#git config --global user.name "姚嘉俊"
+#git config --global user.email "jeromeyjj@gmail.com"
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+git config --global alias.unstage "reset HEAD"
+git config --global core.editor vim
+git config --global core.pager less
+git config --global color.ui true
+git config --global core.autocrlf input
 
 # nautilus-open-terminal
 if (distribution_is Fedora)
@@ -61,7 +68,6 @@ then
 fi
 
 # 
-
 
 # Soft Links
 if (distribution_is Fedora)
