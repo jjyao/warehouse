@@ -25,6 +25,9 @@ HISTSIZE=100
 SAVEHIST=100
 
 # frequently used hosts
+alias 88yun="ssh jjyao@66.175.220.101"
+alias 66yun="ssh jjyao@66.175.218.148"
+alias gfw="ssh -D 8080 root@66.175.220.101"
 
 # some useful aliases
 alias tarc="tar cvf"
@@ -40,6 +43,7 @@ alias ll="ls -lh"
 alias la="ls -a"
 alias grep="grep --color=auto"
 alias df="df -h"
+alias netstat="sudo netstat -apn"
 
 alias port="netstat -tulpn | grep"
 alias memory="free -t -m"

@@ -17,7 +17,6 @@ set showcmd
 
 " visual
 syntax on
-set background=light
 colorscheme bandit
 set number
 set listchars=tab:>-,trail:-
@@ -48,6 +47,12 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'Align'
 Bundle 'sudo.vim'
 Bundle 'mru.vim'
+Bundle 'TaskList.vim'
+Bundle 'compview'
+Bundle 'altercation/vim-colors-solarized'
+
+" compview
+map <unique> <Leader>/ <Plug>CompView
 
 " taglist
 let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
