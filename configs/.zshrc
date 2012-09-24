@@ -5,9 +5,11 @@ bindkey -v
 setopt extendedglob
 setopt globdots
 setopt correctall
-setopt autocd
 setopt sunkeyboardhack
-setopt inc_append_history
+setopt auto_menu
+setopt always_to_end
+setopt long_list_jobs
+setopt list_types
 
 # autload
 autoload -U compinit && compinit 
@@ -20,9 +22,8 @@ zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 
 PROMPT="%{$fg[cyan]%}%n@%m:%~$ %{$reset_color%}%"
 PATH=$PATH:/usr/local/mysql/bin
-HISTFILE=~/.zsh_history
-HISTSIZE=100
-SAVEHIST=100
+PAGER='less'
+EDITOR='vim'
 
 # frequently used hosts
 alias 88yun="ssh jjyao@66.175.220.101"
@@ -37,38 +38,8 @@ alias tarxz="tar xvfz"
 
 alias del="rm -i"
 alias rm="rm -i"
-alias ps="ps -f"
-alias ls="ls -F -G"
-alias ll="ls -lh"
-alias la="ls -a"
-alias grep="grep --color=auto"
-alias df="df -h"
-alias netstat="sudo netstat -apn"
-
-alias port="netstat -tulpn | grep"
-alias memory="free -t -m"
-alias fdmax="cat /proc/sys/fs/file-max" # current maximum number of file descriptors total allowed to be opened simultaneously
-
-user-ret(){
-    if [[ $BUFFER = "" ]] ;then
-        BUFFER="ls"
-        zle end-of-line
-        zle accept-line
-    elif [[ $BUFFER =~ "^cd\ \.\.\.+$" ]] ;then
-        BUFFER=${${BUFFER//\./\.\.\/}/\.\.\//}
-    zle end-of-line
-        zle accept-line
-    else
-        zle accept-line
-    fi
-}
-zle -N user-ret
-bindkey "\r" user-ret
-
-mkcd(){
-    mkdir -p "$@"
-    cd "$@"
-}
+alias rake="nocorrect rake"
+alias apt-get="sudo apt-get"
 
 # locale
 export LC_CTYPE="en_US.UTF-8"
@@ -77,3 +48,10 @@ export LANG="en_US.UTF-8"
 # ruby
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+
+source ./.zsh/stat.zsh
+source ./.zsh/dir.zsh
+source ./.zsh/history.zsh
+source ./.zsh/git.zsh
+source ./.zsh/search.zsh
+source ./.zsh/lang.zsh

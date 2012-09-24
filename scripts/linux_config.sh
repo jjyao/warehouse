@@ -11,7 +11,7 @@ elif (distribution_is Ubuntu)
 then
 	sudo apt-get install git-core  git-doc
 fi
-ssh-keygen -t rsa -c "jeromeyjj@gmail.com"
+ssh-keygen -t rsa -C "jeromeyjj@gmail.com"
 echo "Add SSH key to GitHub and complete the installation of Git"
 read ok
 
@@ -67,7 +67,10 @@ then
 	sudo apt-get install exuberant-ctags
 fi
 
-# 
+# ack-grep
+if (distribution_is Ubuntu)
+then
+    sudo apt-get install ack-grep
 
 # Soft Links
 if (distribution_is Fedora)
