@@ -1,19 +1,21 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " basic
-set lbr
 set nocompatible
+set lbr
 set ignorecase
 set smartcase
 set hlsearch
+set incsearch
 set autoindent
 set cindent
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
-filetype off
-set rtp+=~/.vim/bundle/vundle/
 set showcmd
+set nowrap
+let g:mapleader = ','
+filetype plugin indent on
 
 " visual
 syntax on
@@ -35,8 +37,20 @@ set statusline+=[%l/%L]
 set statusline+=\ [%P]
 hi statusline ctermfg=white ctermbg=black
 
+" map
+map <S-Enter> O<Esc>
+map <C-J> <C-W>j<C-W>_
+map <C-K> <C-W>k<C-W>_
+map <C-L> <C-W>l<C-W>_
+map <C-H> <C-W>h<C-W>_
+nnoremap j gj
+nnoremap k gk
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " plugins
+
+" vundle
+filetype off
+set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " Bundle list
@@ -50,6 +64,28 @@ Bundle 'mru.vim'
 Bundle 'TaskList.vim'
 Bundle 'compview'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'DoxygenToolkit.vim'
+Bundle 'snipMate'
+Bundle 'scrooloose/syntastic'
+Bundle 'tomtom/checksyntax_vim'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'kevinw/pyflakes-vim'
+Bundle 'fs111/pydoc.vim'
+Bundle 'edsono/vim-matchit'
+Bundle 'scrooloose/nerdtree'
+Bundle 'Conque-Shell'
+Bundle 'DataWraith/auto_mkdir'
+Bundle 'skammer/vim-css-color'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'tpope/vim-fugitive'
+Bundle 'mileszs/ack.vim'
+
+" nerdtree
+map <Leader>nt :NERDTreeToggle<CR>
+let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
+
+" doxygen
+let g:DoxygenToolkit_authorName="Jiajun Yao" 
 
 " compview
 map <unique> <Leader>/ <Plug>CompView
@@ -57,8 +93,8 @@ map <unique> <Leader>/ <Plug>CompView
 " taglist
 let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
 let Tlist_WinWidth = 40
-map <F4> : TlistToggle<cr>
-map <F8> : !/usr/local/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+map <Leader>tl : TlistToggle<cr>
+map <Leader>ct: !/usr/local/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 " neocomplcache
 set runtimepath+=/Users/jjyao/.vim/neocomplcache
@@ -140,4 +176,3 @@ let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-filetype plugin on

@@ -10,6 +10,9 @@ setopt auto_menu
 setopt always_to_end
 setopt long_list_jobs
 setopt list_types
+setopt auto_param_keys
+setopt auto_param_slash
+setopt bad_pattern
 
 # autload
 autoload -U compinit && compinit 
@@ -40,6 +43,7 @@ alias del="rm -i"
 alias rm="rm -i"
 alias rake="nocorrect rake"
 alias apt-get="sudo apt-get"
+alias v="vim"
 
 # locale
 export LC_CTYPE="en_US.UTF-8"
@@ -49,9 +53,9 @@ export LANG="en_US.UTF-8"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
-source ./.zsh/stat.zsh
-source ./.zsh/dir.zsh
-source ./.zsh/history.zsh
-source ./.zsh/git.zsh
-source ./.zsh/search.zsh
-source ./.zsh/lang.zsh
+source ~/.zsh/stat.zsh
+source ~/.zsh/dir.zsh
+source ~/.zsh/history.zsh
+source ~/.zsh/git.zsh
+source ~/.zsh/search.zsh
+source ~/.zsh/lang.zsh

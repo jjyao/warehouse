@@ -1,4 +1,5 @@
-alias port="netstat -tulpn | grep"
-alias grep="grep --color=auto"
-alias agrep="ack-grep -i"
-alias pygrep='grep --include="*.py"'
+alias portg="netstat -tulpn | grep"
+alias sockg="netstat | grep"
+alias g="grep --color=auto"
+alias ag="ack-grep -i"
+alias pyg='grep --include="*.py"'
