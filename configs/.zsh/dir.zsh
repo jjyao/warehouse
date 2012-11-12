@@ -20,6 +20,11 @@ function mkcd() {
     cd "$@"
 }
 
+function cd() {
+    builtin cd "$@"
+    ls
+}
+
 function user-ret() {
     if [[ $BUFFER = "" ]] ;then
         BUFFER="ls"

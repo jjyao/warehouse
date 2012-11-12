@@ -1,9 +1,13 @@
 alias gst='git status'
-alias glg='git log'
+alias glg='git log --abbrev-commit --left-right'
+alias glgg='glg --grep'
+alias glgn="git log --graph --all --format=format:'%h - (%ar) %s — %an%d' --abbrev-commit --date=relative"
 alias gps='git push' 
 alias gpl='git pull'
-alias ga='git add'
+alias gdf='git diff --color=auto'
+alias gad='git add'
 alias grm='git rm'
+alias gsh='git show'
 alias gcm='git commit'
 alias gcmm='git commit -m'
 

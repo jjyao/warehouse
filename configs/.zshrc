@@ -13,6 +13,7 @@ setopt list_types
 setopt auto_param_keys
 setopt auto_param_slash
 setopt bad_pattern
+setopt complete_in_word
 
 # autload
 autoload -U compinit && compinit 
@@ -23,7 +24,15 @@ zstyle ':completion:*' menu select=10
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
 zstyle ':completion:*:warnings' format '%BSorry, no matches for: %d%b'
 
-PROMPT="%{$fg[cyan]%}%n@%m:%~$ %{$reset_color%}%"
+# prompt
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git*' formats " %b"
+precmd() {
+    vcs_info
+}
+setopt prompt_subst
+PROMPT='%{$fg[cyan]%}%n@%m:%~${vcs_info_msg_0_}$ %{$reset_color%}%'
 PATH=$PATH:/usr/local/mysql/bin
 PAGER='less'
 EDITOR='vim'
@@ -44,6 +53,7 @@ alias rm="rm -i"
 alias rake="nocorrect rake"
 alias apt-get="sudo apt-get"
 alias v="vim"
+alias clr="clear"
 
 # locale
 export LC_CTYPE="en_US.UTF-8"
@@ -53,9 +63,4 @@ export LANG="en_US.UTF-8"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
-source ~/.zsh/stat.zsh
-source ~/.zsh/dir.zsh
-source ~/.zsh/history.zsh
-source ~/.zsh/git.zsh
-source ~/.zsh/search.zsh
-source ~/.zsh/lang.zsh
+for f in ~/.zsh/*.zsh; do source $f; done
