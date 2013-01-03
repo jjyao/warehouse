@@ -58,6 +58,21 @@ then
 	sudo apt-get install google-chrome-stable
 fi
 
+# pip
+if (distribution_is Ubuntu)
+then
+    sudo apt-get install python-pip
+fi
+
+# htop
+if (distribution_is Ubuntu)
+then
+    sudo apt-get install htop
+fi
+
+# flake8
+sudo pip install flake8
+
 # ctags
 if (distribution_is Fedora)
 then
