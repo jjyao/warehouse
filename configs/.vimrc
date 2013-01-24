@@ -191,6 +191,7 @@ cmap w!! w !sudo tee % >/dev/null
 set pastetoggle=<Leader>p
 nnoremap <Leader>p :set invpaste paste?<CR>
 
+nnoremap <Leader>tws :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " plugins
 
@@ -224,3 +225,4 @@ let g:sparkupNextMapping="<Leader>sn"
 nnoremap <silent> <Leader>df :GundoToggle<CR>
 
 " jsbeautify
+" :call g:Jsbeautify()

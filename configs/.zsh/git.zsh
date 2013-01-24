@@ -5,6 +5,7 @@ alias glgn="git log --graph --all --format=format:'%h - (%ar) %s — %an%d' --ab
 alias gps='git push' 
 alias gpl='git pull'
 alias gdf='git diff --color=auto'
+alias gdfc='gdf --cached'
 alias gad='git add'
 alias grm='git rm'
 alias gsh='git show'

@@ -70,6 +70,12 @@ then
     sudo apt-get install htop
 fi
 
+# nmon
+if (distribution_is Ubuntu)
+then
+    sudo apt-get install nmon
+fi
+
 # flake8
 sudo pip install flake8
 

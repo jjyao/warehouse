@@ -33,7 +33,8 @@ precmd() {
 }
 setopt prompt_subst
 PROMPT='%{$fg[cyan]%}%n@%m:%~${vcs_info_msg_0_}$ %{$reset_color%}%'
-PATH=$PATH:/usr/local/mysql/bin
+ANT_HOME='/usr/local/ant'
+PATH=$PATH:/usr/local/mysql/bin:$ANT_HOME/bin:/usr/lib/jvm/jdk1.7.0/bin/
 PAGER='less'
 EDITOR='vim'
 
@@ -54,6 +55,7 @@ alias rake="nocorrect rake"
 alias apt-get="sudo apt-get"
 alias v="vim"
 alias clr="clear"
+alias ping="mtr"
 
 # locale
 export LC_CTYPE="en_US.UTF-8"
