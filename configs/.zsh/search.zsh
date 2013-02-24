@@ -4,3 +4,4 @@ alias g="grep --color=auto"
 alias ag="ack-grep -i"
 alias pyg='grep --include="*.py"'
 alias hisg="history 1 | grep"
+alias pidg="pidof"

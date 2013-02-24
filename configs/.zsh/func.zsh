@@ -42,3 +42,15 @@ function myip {
 function zshreload {
     source $HOME/.zshrc 1>/dev/null
 }
+
+function path {
+    echo $PATH | tr ":" "\n" | sort
+}
+
+function portscan {
+    nc -z $1 $2
+}
+
+function zombies {
+    sudo ps xawo state=,pid=,cmd= | grep -w Z
+}
