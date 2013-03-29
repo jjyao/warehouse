@@ -38,6 +38,8 @@ Bundle 'myusuf3/numbers.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'sjl/gundo.vim'
 Bundle 'jsbeautify'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'FencView.vim'
 
 filetype plugin indent on
 
@@ -48,6 +50,7 @@ let g:DoxygenToolkit_authorName="jjyao"
 let g:syntastic_check_on_open=1
 let g:syntastic_auto_loc_list=0
 let g:syntastic_enable_signs=1
+" :SyntasticToggleMode<CR>
 
 " ack
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
@@ -149,6 +152,7 @@ set foldmethod=manual
 set foldlevelstart=99
 let g:mapleader = ','
 set synmaxcol=512
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
 " abbreviation
 ab hte the
@@ -178,10 +182,12 @@ hi statusline ctermfg=white ctermbg=black
 
 " map
 map <CR> o<Esc>
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-map <C-h> <C-w>h
+nnoremap ,- <C-w>s
+nnoremap ,\| <C-w>v
+nnoremap ,j <C-w>j
+nnoremap ,k <C-w>k
+nnoremap ,l <C-w>l
+nnoremap ,h <C-w>h
 nnoremap j gj
 nnoremap k gk
 nnoremap ; :
@@ -226,3 +232,7 @@ nnoremap <silent> <Leader>df :GundoToggle<CR>
 
 " jsbeautify
 " :call g:Jsbeautify()
+
+" fencview
+" :FencAutoDetect
+" :FencView
