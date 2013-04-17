@@ -29,9 +29,9 @@ EOSQL
 
 # edit wp-config.php
 mv $sitename/wp-config-sample.php $sitename/wp-config.php
-sed -i "s/^define('DB_NAME'.*);/define('DB_NAME', '$sitename');/g"  $sitename/wp-config.php
-sed -i "s/^define('DB_USER'.*);/define('DB_USER', '$sitename');/g"  $sitename/wp-config.php
-sed -i "s/^define('DB_PASSWORD'.*);/define('DB_PASSWORD', '$sitename');/g"  $sitename/wp-config.php
+sed -i "s/^define('DB_NAME'.*);/define('DB_NAME', '$sanitized_sitename');/g"  $sitename/wp-config.php
+sed -i "s/^define('DB_USER'.*);/define('DB_USER', '$sanitized_sitename');/g"  $sitename/wp-config.php
+sed -i "s/^define('DB_PASSWORD'.*);/define('DB_PASSWORD', '$sanitized_sitename');/g"  $sitename/wp-config.php
 salts=`curl https://api.wordpress.org/secret-key/1.1/salt`
 printf '%s\n' "g/put your unique phrase here/d" a "$salts" . w | ed -s $sitename/wp-config.php
 sed -i "s/\r//g" $sitename/wp-config.php
