@@ -1,9 +1,9 @@
 <?php
-$url = "http://mail.88yun.org/postfixadmin/create-mailbox.php?domain=88yun.org";
+$url = "http://example.com/postfixadmin/create-mailbox.php?domain=example.com";
 function create_mailbox( $name ) {
     $mailbox = array(
         'fUsername' => $name,
-        'fDomain' => '88yun.org',
+        'fDomain' => 'example.com',
         'fPassword' => $name,
         'fPassword2' => $name,
         'fName' => '',
@@ -18,7 +18,7 @@ function create_mailbox( $name ) {
     return rtrim( $fields_string, '&' );
 }
 
-for( $i = 2954; $i < 50000; $i++ ) {
+for( $i = 0; $i < 50000; $i++ ) {
     $curl = curl_init();
     curl_setopt( $curl, CURLOPT_URL, $url );
     curl_setopt( $curl, CURLOPT_POST, true );

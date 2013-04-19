@@ -4,6 +4,7 @@ MYSQL_ROOT_PASSWORD='password'
 # check input
 if [ $# -ne 1 ]; then
     echo "Usage: sh wordpress.sh sitename"
+    exit
 fi
 
 sitename=$1
