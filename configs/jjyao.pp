@@ -7,8 +7,10 @@ Exec {
     path => ["/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/", "/usr/local/bin/"]
 }
 
-package { ['git-core', 'nautilus-open-terminal', 'shutter', 'python-pip', 'htop', 'nmon', 'exuberant-ctags', 'ack-grep']:
+package { ['git-core', 'nautilus-open-terminal', 'shutter', 'python-pip', 'htop', 'nmon', 'exuberant-ctags', 'ack-grep', 'axel' ]:
 }
+
+package { ['python-devel', 'mysql-devel', 'zlib-devel', 'openssl-devel'] }
 
 package { ['flake8']:
     provider => 'pip',
@@ -35,6 +37,9 @@ notify { 'ssh':
 
 exec { 'neocomplcache':
     command => 'git clone https://github.com/vim-scripts/neocomplcache.git /usr/share/vim/plugins/neocomplcache',
+}
+
+class percona-toolkit {
 }
 
 Package['git-core'] -> Exec['git'] -> Exec['ssh'] -> Notify['ssh'] -> Exec['neocomplcache'] 
