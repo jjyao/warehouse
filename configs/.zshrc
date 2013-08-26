@@ -56,7 +56,8 @@ alias apt-get="sudo apt-get"
 alias v="vim"
 alias clr="clear"
 alias ping="mtr"
-alias mysql="mysql --safe-updates"
+alias mysqlsu="mysql --safe-updates"
+alias rscp="rsync -av -P"
 
 # locale
 export LC_CTYPE="en_US.UTF-8"

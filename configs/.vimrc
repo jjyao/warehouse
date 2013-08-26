@@ -1,4 +1,5 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " plugins
 
 " vundle
@@ -15,7 +16,6 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neocomplcache-snippets-complete'
 Bundle 'Align'
 Bundle 'sudo.vim'
-Bundle 'mru.vim'
 Bundle 'TaskList.vim'
 Bundle 'compview' 
 Bundle 'altercation/vim-colors-solarized'
@@ -40,6 +40,11 @@ Bundle 'sjl/gundo.vim'
 Bundle 'jsbeautify'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'FencView.vim'
+Bundle 'mattn/zencoding-vim'
+Bundle 'terryma/vim-multiple-cursors'
+Bundle 'LargeFile'
+Bundle 'kien/ctrlp.vim'
+Bundle 'bling/vim-airline'
 
 filetype plugin indent on
 
@@ -152,7 +157,8 @@ set foldmethod=manual
 set foldlevelstart=99
 let g:mapleader = ','
 set synmaxcol=512
-set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+set guifont=airline
+" set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
 " abbreviation
 ab hte the
@@ -171,14 +177,14 @@ let php_sql_query=1
 
 " status bar
 set laststatus=2
-set statusline=
-set statusline+=[%F]
-set statusline+=\ [%{''.(&fenc!=''?&fenc:&enc).''}]
-set statusline+=\ %{SyntasticStatuslineFlag()}
-set statusline+=%=
-set statusline+=[%l/%L]
-set statusline+=\ [%P]
-hi statusline ctermfg=white ctermbg=black
+"set statusline=
+"set statusline+=[%F]
+"set statusline+=\ [%{''.(&fenc!=''?&fenc:&enc).''}]
+"set statusline+=\ %{SyntasticStatuslineFlag()}
+"set statusline+=%=
+"set statusline+=[%l/%L]
+"set statusline+=\ [%P]
+"hi statusline ctermfg=white ctermbg=black
 
 " map
 map <CR> o<Esc>
@@ -218,7 +224,7 @@ let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn'
 let g:nerdtree_tabs_open_on_gui_startup=0
 
 " taglist
-let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"
+let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 let Tlist_WinWidth = 40
 map <Leader>tl : TlistToggle<cr>
 map <Leader>ct: !/usr/local/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
@@ -230,9 +236,18 @@ let g:sparkupNextMapping="<Leader>sn"
 " gundo
 nnoremap <silent> <Leader>df :GundoToggle<CR>
 
+" LargeFile
+let g:LargeFile=500
+
 " jsbeautify
 " :call g:Jsbeautify()
 
 " fencview
 " :FencAutoDetect
 " :FencView
+
+" airline
+let g:airline_powerline_fonts = 1
+let g:airline_enable_fugitive = 1
+let g:airline_enable_syntastic = 0
+let g:airline_theme='solarized'

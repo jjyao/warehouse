@@ -10,7 +10,7 @@ Exec {
 package { ['git-core', 'nautilus-open-terminal', 'shutter', 'python-pip', 'htop', 'nmon', 'exuberant-ctags', 'ack-grep', 'axel' ]:
 }
 
-package { ['python-devel', 'mysql-devel', 'zlib-devel', 'openssl-devel'] }
+package { ['python-devel', 'mysql-devel', 'zlib-devel', 'openssl-devel', 'ncdu'] }
 
 package { ['flake8']:
     provider => 'pip',
