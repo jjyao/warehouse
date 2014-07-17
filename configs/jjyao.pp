@@ -7,7 +7,7 @@ Exec {
     path => ["/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/", "/usr/local/bin/"]
 }
 
-package { ['git-core', 'nautilus-open-terminal', 'shutter', 'python-pip', 'htop', 'nmon', 'exuberant-ctags', 'ack-grep', 'axel' ]:
+package { ['git-core', 'nautilus-open-terminal', 'shutter', 'python-pip', 'htop', 'nmon', 'exuberant-ctags', 'ack-grep', 'axel', 'httpie']:
 }
 
 package { ['python-devel', 'mysql-devel', 'zlib-devel', 'openssl-devel', 'ncdu'] }
@@ -17,7 +17,7 @@ package { ['flake8']:
 }
 
 exec { 'git':
-    command => 'git config --global user.name "姚嘉俊";
+    command => 'git config --global user.name "jjyao";
                 git config --global user.email "jeromeyjj@gmail.com";
                 git config --global alias.lg "log --color --graph --pretty=format:\'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset\' --abbrev-commit --";
                 git config --global alias.unstage "reset HEAD";
