@@ -5,47 +5,49 @@
 " vundle
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" Bundle list
-Bundle 'gmarik/vundle'
-Bundle 'BlockComment.vim'
-Bundle 'taglist.vim'
-Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/neocomplcache-snippets-complete'
-Bundle 'Align'
-Bundle 'sudo.vim'
-Bundle 'TaskList.vim'
-Bundle 'compview' 
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'DoxygenToolkit.vim'
-"Bundle 'snipMate'
-Bundle 'scrooloose/syntastic'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'fs111/pydoc.vim'
-Bundle 'edsono/vim-matchit'
-Bundle 'scrooloose/nerdtree'
-Bundle 'jistr/vim-nerdtree-tabs'
-Bundle 'Conque-Shell'
-Bundle 'DataWraith/auto_mkdir'
-Bundle 'skammer/vim-css-color'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tpope/vim-fugitive'
-Bundle 'mileszs/ack.vim'
-Bundle 'bingaman/vim-sparkup'
-Bundle 'myusuf3/numbers.vim'
-Bundle 'tpope/vim-surround'
-Bundle 'sjl/gundo.vim'
-Bundle 'jsbeautify'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'FencView.vim'
-Bundle 'mattn/zencoding-vim'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'LargeFile'
-Bundle 'kien/ctrlp.vim'
-Bundle 'bling/vim-airline'
+" Plugin list
+Plugin 'gmarik/Vundle.vim'
+Plugin 'BlockComment.vim'
+Plugin 'taglist.vim'
+Plugin 'Shougo/neocomplcache'
+Plugin 'Shougo/neosnippet'
+Plugin 'Shougo/neosnippet-snippets'
+Plugin 'Align'
+Plugin 'sudo.vim'
+Plugin 'TaskList.vim'
+Plugin 'compview' 
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'DoxygenToolkit.vim'
+"Plugin 'snipMate'
+Plugin 'scrooloose/syntastic'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'fs111/pydoc.vim'
+Plugin 'edsono/vim-matchit'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'Conque-Shell'
+Plugin 'DataWraith/auto_mkdir'
+Plugin 'skammer/vim-css-color'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tpope/vim-fugitive'
+Plugin 'mileszs/ack.vim'
+Plugin 'bingaman/vim-sparkup'
+Plugin 'myusuf3/numbers.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'sjl/gundo.vim'
+Plugin 'jsbeautify'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'FencView.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'LargeFile'
+Plugin 'kien/ctrlp.vim'
+Plugin 'bling/vim-airline'
 
+call vundle#end()
 filetype plugin indent on
 
 " doxygen
@@ -249,5 +251,12 @@ let g:LargeFile=500
 " airline
 let g:airline_powerline_fonts = 1
 let g:airline_enable_fugitive = 1
-let g:airline_enable_syntastic = 0
 let g:airline_theme='solarized'
+let g:airline#extensions#syntastic#enabled = 0
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#hunks#enabled = 0
+let g:airline_section_z = '%l/%L: %2v'
+function! AirlineInit()
+    let g:airline_symbols.branch = ''
+endfunction
+autocmd VimEnter * call AirlineInit()
