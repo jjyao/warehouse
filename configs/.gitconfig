@@ -5,6 +5,7 @@
 	ui = false
 [core]
 	editor = vim
+	excludesfile = ~/.gitignore
 [alias]
     ours   = "!f() { git checkout --ours $@ && git add $@; }; f"
     theirs = "!f() { git checkout --theirs $@ && git add $@; }; f"
