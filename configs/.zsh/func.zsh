@@ -87,6 +87,10 @@ function run {
     done
 }
 
+function 80l {
+    awk 'length > 80 {print FILENAME " line " FNR "\n\t" $0}' *
+}
+
 export MARKPATH=$HOME/.marks
 function jump {
     cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"

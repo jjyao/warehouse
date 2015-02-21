@@ -13,15 +13,15 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'BlockComment.vim'
 Plugin 'taglist.vim'
 Plugin 'Shougo/neocomplcache'
-Plugin 'Shougo/neosnippet'
-Plugin 'Shougo/neosnippet-snippets'
+"Plugin 'Shougo/neosnippet'
+"Plugin 'Shougo/neosnippet-snippets'
+"Plugin 'snipMate'
 Plugin 'Align'
 Plugin 'sudo.vim'
 Plugin 'TaskList.vim'
-Plugin 'compview' 
+Plugin 'compview'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'DoxygenToolkit.vim'
-"Plugin 'snipMate'
 Plugin 'scrooloose/syntastic'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'fs111/pydoc.vim'
@@ -56,7 +56,7 @@ let g:DoxygenToolkit_authorName="jjyao"
 " syntastic
 let g:syntastic_check_on_open=1
 let g:syntastic_auto_loc_list=0
-let g:syntastic_enable_signs=1
+let g:syntastic_enable_signs=0
 " :SyntasticToggleMode<CR>
 
 " ack
@@ -131,6 +131,7 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " Enable heavy omni completion.
+set completeopt-=preview
 if !exists('g:neocomplcache_omni_patterns')
   let g:neocomplcache_omni_patterns = {}
 endif
@@ -241,6 +242,9 @@ nnoremap <silent> <Leader>df :GundoToggle<CR>
 " LargeFile
 let g:LargeFile=500
 
+" ctrlp
+let g:ctrlp_working_path_mode = 'a'
+
 " jsbeautify
 " :call g:Jsbeautify()
 
@@ -252,7 +256,7 @@ let g:LargeFile=500
 let g:airline_powerline_fonts = 1
 let g:airline_enable_fugitive = 1
 let g:airline_theme='solarized'
-let g:airline#extensions#syntastic#enabled = 0
+let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#hunks#enabled = 0
 let g:airline_section_z = '%l/%L: %2v'
