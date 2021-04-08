@@ -57,29 +57,23 @@
 
 \begin{resume}
 %----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
- 
-\section{EDUCATION}
-
-\textbf{Carnegie Mellon University}, Pittsburgh, PA \hfill December 2015 \\
-School of Computer Science, Master of Computational Data Science \hfill GPA 4.03/4.0
-
-\textbf{Nanjing University}, Nanjing, P.R. China \hfill June 2013 \\
-Bachelor of Engineering in Software Engineering \hfill GPA 90.2/100
-
-%----------------------------------------------------------------------------------------
-%	EXPERIENCE SECTION
+%	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
-\section{EXPERIENCE}
+\section{WORK EXPERIENCE}
 
 \textbf{LinkedIn Distributed Graph Team} \hfill February 2016 - Present \\
 {\sl Staff Software Engineer}  \hfill Sunnyvale, CA
 \begin{itemize} \itemsep -2pt
-\item[-] Designed and developed the next generation graph database LIquid
-\item[-] Worked on the entire stack of the system: storage, query evaluation, data ingestion, cluster infra
-\item[-] Led several projects: client migration, third-party graph, imperative query evaluation, REST API
+\item[-] Design and develop the next generation graph database LIquid:
+\item[ ] https://engineering.linkedin.com/blog/2020/liquid-the-soul-of-a-new-graph-database-part-1
+\item[-] Work on the entire stack of the system: storage, query evaluation and frontend
+\item[-] Leading the traffic migration project: migrate client traffic to the frontend API seemlessly
+\item[-] Working on the declarative query evaluation project: distributed, dynamic and declarative query evaluation engine using Prolog
+\item[-] Led the third-party graph project: launched the first third-party LIquid instance through collaboration with a cross-org client team
+\item[-] Led the frontend API project: launched the only external RESTful API used by all clients with ACL, quota and monitoring features
+\item[-] Led the imperative query evaluation project: served 100\% LIquid traffic with an imperative query language and an imperative query evaluation engine
+\item[-] Designed and developed index parallel optimization: optimize running database indexes with no downtime
 \end{itemize}
 
 \textbf{LinkedIn Distributed Graph Team} \hfill May 2015 - August 2015 \\
@@ -92,7 +86,7 @@ Bachelor of Engineering in Software Engineering \hfill GPA 90.2/100
 {\sl Software Engineer, Founding member}                          \hfill  Beijing, P.R. China
 \begin{itemize} \itemsep -2pt
 \item[-] Full stack developer
-\item[-] Developed a cloud-based new mail checking and notification system that served >100K users
+\item[-] Developed a cloud-based new email checking and notification system that served >100K users
 \item[-] Developed an Android email app LightMail
 \end{itemize}
 
@@ -100,53 +94,70 @@ Bachelor of Engineering in Software Engineering \hfill GPA 90.2/100
 %	PROJECT EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
-\section{SELECTED PROJECTS}
-
-\textbf{L4 Compiler} \hfill August 2015 - December 2015 \\
-{\sl Team Member (2 developers)} \hfill Carnegie Mellon University
-\begin{itemize} \itemsep -2pt
-\item[-] Designed and implemented a compiler for the programming language L4
-\item[-] Implemented some compiler optimizations: peephole, CSE, function inlining, constant folding, constant propagation, copy propagation and dead code elimination
-\item[-] Implemented a mark-and-sweep garbage collector for L4
-\end{itemize}
-
-\textbf{Kernel} \hfill February 2015 - April 2015 \\
-{\sl Team Member (2 developers)} \hfill Carnegie Mellon University
-\begin{itemize} \itemsep -2pt
-\item[-] A Unix-like kernel that supports paging, preemptive multitasking and system calls
-\item[-] Designed and implemented a scheduler, drivers and synchronization primitives
-\item[-] Learned a lot about synchronization, deadlock, parallelism, process, thread and virtual memory
-\item[-] Got A in 15-410
-\end{itemize}
-
-\textbf{MapReduce Framework}  \hfill  October 2014 - November 2014 \\
-{\sl Team Member (2 developers)}   \hfill  Carnegie Mellon University
-\begin{itemize} \itemsep -2pt
-\item[-] A MapReduce framework that is distributed and fault-tolerant
-\item[-] Investigated the design and implementation of Hadoop and HDFS
-\item[-] Architected and developed a distributed file system like HDFS
-\item[-] Architected and developed a MapReduce facility like Hadoop
-\end{itemize}
-
-\textbf{Congestion Control with BitTorrent} \hfill October 2014 - November 2014 \\
-{\sl Team Member (2 developers)} \hfill Carnegie Mellon University
-\begin{itemize} \itemsep -2pt
-\item[-] A BitTorrent-like file transfer application on top of UDP
-\item[-] Architected and developed the server-side of the application
-\item[-] Implemented congestion control mechanisms: slow start, AIMD and fast retransmission
-\end{itemize}
+%\section{SELECTED PROJECTS}
+%
+%\textbf{L4 Compiler} \hfill August 2015 - December 2015 \\
+%{\sl Team Member (2 developers)} \hfill Carnegie Mellon University
+%\begin{itemize} \itemsep -2pt
+%\item[-] Designed and implemented a compiler for the programming language L4
+%\item[-] Implemented some compiler optimizations: peephole, CSE, function inlining, constant folding, constant propagation, copy propagation and dead code elimination
+%\item[-] Implemented a mark-and-sweep garbage collector for L4
+%\end{itemize}
+%
+%\textbf{Kernel} \hfill February 2015 - April 2015 \\
+%{\sl Team Member (2 developers)} \hfill Carnegie Mellon University
+%\begin{itemize} \itemsep -2pt
+%\item[-] A Unix-like kernel that supports paging, preemptive multitasking and system calls
+%\item[-] Designed and implemented a scheduler, drivers and synchronization primitives
+%\item[-] Learned a lot about synchronization, deadlock, parallelism, process, thread and virtual memory
+%\item[-] Got A in 15-410
+%\end{itemize}
+%
+%\textbf{MapReduce Framework}  \hfill  October 2014 - November 2014 \\
+%{\sl Team Member (2 developers)}   \hfill  Carnegie Mellon University
+%\begin{itemize} \itemsep -2pt
+%\item[-] A MapReduce framework that is distributed and fault-tolerant
+%\item[-] Investigated the design and implementation of Hadoop and HDFS
+%\item[-] Architected and developed a distributed file system like HDFS
+%\item[-] Architected and developed a MapReduce facility like Hadoop
+%\end{itemize}
+%
+%\textbf{Congestion Control with BitTorrent} \hfill October 2014 - November 2014 \\
+%{\sl Team Member (2 developers)} \hfill Carnegie Mellon University
+%\begin{itemize} \itemsep -2pt
+%\item[-] A BitTorrent-like file transfer application on top of UDP
+%\item[-] Architected and developed the server-side of the application
+%\item[-] Implemented congestion control mechanisms: slow start, AIMD and fast retransmission
+%\end{itemize}
 
 %----------------------------------------------------------------------------------------
 %	RESEARCH EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
  
-%\section{RESEARCH EXPERIENCE}
-%
-%\textbf{Recommender System for E-commerce Websites}       \hfill  May 2011 - May 2012 \\
-%{\sl Undergraduate Research Assistant}  \hfill  Nanjing University
-%\begin{itemize} \itemsep -2pt
-%\item[-] Studied data mining and applied related techniques to the "user cold start" problem
-%\end{itemize}
+\section{RESEARCH EXPERIENCE}
+
+\textbf{Recommender System for E-commerce Websites}       \hfill  May 2011 - May 2012 \\
+{\sl Undergraduate Research Assistant}  \hfill  Nanjing University
+\begin{itemize} \itemsep -2pt
+\item[-] Studied data mining and applied related techniques to the user cold start problem
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+ 
+\section{EDUCATION}
+
+\textbf{Carnegie Mellon University}, Pittsburgh, PA \hfill December 2015 \\
+School of Computer Science, Master of Computational Data Science \hfill GPA 4.03/4.0
+\begin{itemize} \itemsep -2pt
+\item[-] Took classes in compiler, operating system, distributed system, network, storage
+\item[-] Designed and developed a kernel that supports paging, multitasking and system calls
+\item[-] Designed and developed a compiler for the L4 programming language with various optimizations: CSE, function inlining, constant folding, constant propagation, dead code elimination, etc
+\end{itemize}
+
+\textbf{Nanjing University}, Nanjing, P.R. China \hfill June 2013 \\
+Bachelor of Engineering in Software Engineering \hfill GPA 90.2/100
 
 %----------------------------------------------------------------------------------------
 %	SKILLS SECTION
@@ -154,11 +165,11 @@ Bachelor of Engineering in Software Engineering \hfill GPA 90.2/100
 \section{SKILLS}
 
 Languages:             \hfill  Java, C++, Python, PHP, JavaScript  \\
-Big Data Technology:   \hfill Hadoop, Spark, Kafka, Samza, Hive, Pig, Impala \\
+Operating System:     \hfill  Linux \\
+Big Data Technology:   \hfill Hadoop, Spark, Kafka, Samza, Pig \\
 Mobile Technology:    \hfill  Android \\
 Web Technology:       \hfill  Netty, Nginx, Twisted \\
 %Database Experience:  \hfill  MySQL, SQLite \\
-%Operating System:     \hfill  Linux
 
 \end{resume}
 \end{document}
