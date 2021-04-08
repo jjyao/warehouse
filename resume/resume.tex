@@ -1,0 +1,164 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Jiajun Yao's resume
+%
+% Original author:
+% Rensselaer Polytechnic Institute (http://www.rpi.edu/dept/arc/training/latex/resumes/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[mm, 7pt]{resume} % Use the resume.cls style, the font size can be changed to 11pt or 12pt here
+
+%----XeTeX start
+% FONTS
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+% if want to use specific weight as default, add UprightFont={* Light} option
+% for detail, see http://tex.stackexchange.com/q/62603
+\setromanfont[Ligatures={Common}, Numbers={OldStyle}]{Palatino} %candidates: Palatino, Baskerville, Latin Modern Math,
+\setmonofont[Scale=0.8]{Monaco} 
+\setsansfont[Scale=0.9]{Optima Regular}
+%----XeTeX end
+
+%\usepackage{helvet} % Default font is the helvetica postscript font
+%\usepackage{newcent} % To change the default font to the new century schoolbook postscript font uncomment this line and comment the one above
+
+\addtolength{\oddsidemargin}{-0.45in}
+\addtolength{\textwidth}{0.9in} 
+\addtolength{\textheight}{1.0in}
+\addtolength{\topmargin}{-0.6in}
+\setlength{\parskip}{0.7em}
+
+\begin{document}
+%----------------------------------------------------------------------------------------
+%	NAME AND ADDRESS SECTION
+%----------------------------------------------------------------------------------------
+
+\moveleft.5\hoffset\centerline{\large\bf Jiajun Yao} % Your name at the top
+\moveleft.5\hoffset\centerline{1 (412) 951-0068}
+\moveleft.5\hoffset\centerline{jeromeyjj@gmail.com}
+\moveleft.5\hoffset\centerline{http://blog.jjyao.me/}
+\moveleft.5\hoffset\centerline{https://www.linkedin.com/in/jjyao/}
+\moveleft\hoffset\vbox{\hrule width 7.4in height 0.8pt} % Horizontal line; adjust line thickness by changing the '1pt'
+\vspace{-0.1in}
+%----------------------------------------------------------------------------------------
+
+\begin{resume}
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+ 
+\section{EDUCATION}
+
+\textbf{Carnegie Mellon University}, Pittsburgh, PA \hfill December 2015 \\
+School of Computer Science, Master of Computational Data Science \hfill GPA 4.03/4.0
+
+\textbf{Nanjing University}, Nanjing, P.R. China \hfill June 2013 \\
+Bachelor of Engineering in Software Engineering \hfill GPA 90.2/100
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{EXPERIENCE}
+
+\textbf{LinkedIn Distributed Graph Team} \hfill February 2016 - Present \\
+{\sl Staff Software Engineer}  \hfill Sunnyvale, CA
+\begin{itemize} \itemsep -2pt
+\item[-] Designed and developed the next generation graph database LIquid
+\item[-] Worked on the entire stack of the system: storage, query evaluation, data ingestion, cluster infra
+\item[-] Led several projects: client migration, third-party graph, imperative query evaluation, REST API
+\end{itemize}
+
+\textbf{LinkedIn Distributed Graph Team} \hfill May 2015 - August 2015 \\
+{\sl Software Engineering Intern}  \hfill Mountain View, CA
+\begin{itemize} \itemsep -2pt
+\item[-] Designed and developed a dark canary testing framework
+\end{itemize}
+
+\textbf{Qiduo Information Technology Co., Ltd.}  \hfill  July 2012 - July 2014 \\
+{\sl Software Engineer, Founding member}                          \hfill  Beijing, P.R. China
+\begin{itemize} \itemsep -2pt
+\item[-] Full stack developer
+\item[-] Developed a cloud-based new mail checking and notification system that served >100K users
+\item[-] Developed an Android email app LightMail
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	PROJECT EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{SELECTED PROJECTS}
+
+\textbf{L4 Compiler} \hfill August 2015 - December 2015 \\
+{\sl Team Member (2 developers)} \hfill Carnegie Mellon University
+\begin{itemize} \itemsep -2pt
+\item[-] Designed and implemented a compiler for the programming language L4
+\item[-] Implemented some compiler optimizations: peephole, CSE, function inlining, constant folding, constant propagation, copy propagation and dead code elimination
+\item[-] Implemented a mark-and-sweep garbage collector for L4
+\end{itemize}
+
+\textbf{Kernel} \hfill February 2015 - April 2015 \\
+{\sl Team Member (2 developers)} \hfill Carnegie Mellon University
+\begin{itemize} \itemsep -2pt
+\item[-] A Unix-like kernel that supports paging, preemptive multitasking and system calls
+\item[-] Designed and implemented a scheduler, drivers and synchronization primitives
+\item[-] Learned a lot about synchronization, deadlock, parallelism, process, thread and virtual memory
+\item[-] Got A in 15-410
+\end{itemize}
+
+\textbf{MapReduce Framework}  \hfill  October 2014 - November 2014 \\
+{\sl Team Member (2 developers)}   \hfill  Carnegie Mellon University
+\begin{itemize} \itemsep -2pt
+\item[-] A MapReduce framework that is distributed and fault-tolerant
+\item[-] Investigated the design and implementation of Hadoop and HDFS
+\item[-] Architected and developed a distributed file system like HDFS
+\item[-] Architected and developed a MapReduce facility like Hadoop
+\end{itemize}
+
+\textbf{Congestion Control with BitTorrent} \hfill October 2014 - November 2014 \\
+{\sl Team Member (2 developers)} \hfill Carnegie Mellon University
+\begin{itemize} \itemsep -2pt
+\item[-] A BitTorrent-like file transfer application on top of UDP
+\item[-] Architected and developed the server-side of the application
+\item[-] Implemented congestion control mechanisms: slow start, AIMD and fast retransmission
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	RESEARCH EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+ 
+%\section{RESEARCH EXPERIENCE}
+%
+%\textbf{Recommender System for E-commerce Websites}       \hfill  May 2011 - May 2012 \\
+%{\sl Undergraduate Research Assistant}  \hfill  Nanjing University
+%\begin{itemize} \itemsep -2pt
+%\item[-] Studied data mining and applied related techniques to the "user cold start" problem
+%\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS SECTION
+%----------------------------------------------------------------------------------------
+\section{SKILLS}
+
+Languages:             \hfill  Java, C++, Python, PHP, JavaScript  \\
+Big Data Technology:   \hfill Hadoop, Spark, Kafka, Samza, Hive, Pig, Impala \\
+Mobile Technology:    \hfill  Android \\
+Web Technology:       \hfill  Netty, Nginx, Twisted \\
+%Database Experience:  \hfill  MySQL, SQLite \\
+%Operating System:     \hfill  Linux
+
+\end{resume}
+\end{document}
